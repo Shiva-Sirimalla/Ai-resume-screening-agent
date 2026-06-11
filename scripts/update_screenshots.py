@@ -12,6 +12,7 @@ MAPPING = [
     ("1", "overview.png"),
     ("2", "home.png"),
     ("3", "analytics.png"),
+    ("4", "export.png"),
 ]
 
 

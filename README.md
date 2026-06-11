@@ -4,7 +4,30 @@
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?style=flat&logo=streamlit&logoColor=white)](https://streamlit.io/)
 
-100% Python resume screening — semantic matching, skill gaps, AI verdicts, and a modern Streamlit dashboard powered by **Groq**.
+## Synopsis
+
+**ResumeAI** is an intelligent resume screening system that helps recruiters and hiring teams evaluate candidates faster and more consistently. Instead of manually reading every resume, you upload multiple PDF or DOCX files, paste a job description, and the app automatically ranks candidates using a multi-layer scoring engine.
+
+The system combines **semantic matching** (FAISS + Sentence Transformers), **skill-gap analysis**, and **Groq-powered LLM evaluation** to produce a composite match score, hire verdict (Hire / Maybe / Reject), candidate summaries, and tailored interview questions — all through a modern **Streamlit** dashboard.
+
+Built entirely in **Python**, ResumeAI is designed for real-world hiring workflows: batch resume processing, live screening progress, analytics dashboards, and CSV/JSON export for sharing results with your team.
+
+### Tech stack
+
+| Layer | Tools |
+|-------|-------|
+| UI | Streamlit |
+| LLM | Groq (Llama 3.3), Grok, or OpenAI |
+| Embeddings | Sentence Transformers (`all-MiniLM-L6-v2`) |
+| Vector search | FAISS |
+| Parsing | pdfplumber, python-docx |
+| Language | Python 3.11+ |
+
+### Who is it for?
+
+- Recruiters screening large applicant pools  
+- HR teams comparing resumes against a job description  
+- Developers learning AI agents, RAG-style matching, and LLM integrations  
 
 ## Screenshots
 
@@ -17,8 +40,10 @@
 ### 3. AI screening results
 ![Ranked candidates and analytics](docs/screenshots/analytics.png)
 
-> Source files: `screenshots/1-overview.pdf`, `2-home-page.pdf`, `3-screening-results.pdf`  
-> Refresh images: `python scripts/update_screenshots.py`
+### 4. Download reports
+![Export CSV and JSON](docs/screenshots/export.png)
+
+> Source files in `screenshots/` (numbered PDFs). Refresh: `python scripts/update_screenshots.py`
 
 ## Features
 
