@@ -1,10 +1,35 @@
 # AI Resume Screening Agent
 
-100% Python resume screening — semantic matching, skill gaps, AI verdicts, and a Streamlit dashboard.
+[![GitHub](https://img.shields.io/badge/GitHub-Ai--resume--screening--agent-4f46e5?style=flat&logo=github)](https://github.com/Shiva-Sirimalla/Ai-resume-screening-agent)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?style=flat&logo=streamlit&logoColor=white)](https://streamlit.io/)
 
-## Quick start (Python only)
+100% Python resume screening — semantic matching, skill gaps, AI verdicts, and a modern Streamlit dashboard powered by **Groq**.
+
+## Screenshots
+
+### ResumeAI home
+![ResumeAI home page](docs/screenshots/home.png)
+
+### AI screening results
+![AI screening results](docs/screenshots/analytics.png)
+
+### App overview
+![App overview](docs/screenshots/overview.png)
+
+## Features
+
+- **Multi-signal scoring** — semantic similarity (FAISS), skill overlap, AI fit score
+- **Groq LLM analysis** — summary, verdict (Hire/Maybe/Reject), interview questions
+- **Real-time Streamlit UI** — upload resumes, live progress, ranked dashboard
+- **Export** — CSV and JSON reports
+- **CLI mode** — screen resumes from the terminal
+
+## Quick start
 
 ```bash
+git clone https://github.com/Shiva-Sirimalla/Ai-resume-screening-agent.git
+cd Ai-resume-screening-agent
 python setup_env.py
 ```
 
@@ -49,13 +74,15 @@ Also supports `GROK_API_KEY`, `XAI_API_KEY`, or `OPENAI_API_KEY`.
 ## Project structure
 
 ```
-resume-screening-agent/
-├── main.py              # Python entry point (run this)
+Ai-resume-screening-agent/
+├── main.py              # Python entry point
 ├── setup_env.py         # Install deps + create .env
 ├── app.py               # Streamlit dashboard
 ├── agents/              # LLM screening + ranking
 ├── parser/              # PDF & DOCX extraction
-└── resume_core/         # Scoring, skills, pipeline
+├── resume_core/         # Scoring, skills, pipeline
+├── ui/                  # Theme and styling
+└── docs/screenshots/    # README screenshots
 ```
 
 ## Scoring
@@ -64,3 +91,17 @@ resume-screening-agent/
 - **Skills** — keyword overlap with job description
 - **AI Fit** — LLM score (0–100)
 - **Composite** — weighted final rank (adjust in UI sidebar)
+
+## Refresh screenshots
+
+With the app running (`python main.py`):
+
+```bash
+pip install playwright
+python -m playwright install chromium
+python scripts/capture_screenshots.py
+```
+
+## Author
+
+[Shiva-Sirimalla](https://github.com/Shiva-Sirimalla)
