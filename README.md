@@ -8,14 +8,17 @@
 
 ## Screenshots
 
-### ResumeAI home
-![ResumeAI home page](docs/screenshots/home.png)
+### 1. App overview
+![ResumeAI overview](docs/screenshots/overview.png)
 
-### AI screening results
-![AI screening results](docs/screenshots/analytics.png)
+### 2. Home page
+![Upload and screen](docs/screenshots/home.png)
 
-### App overview
-![App overview](docs/screenshots/overview.png)
+### 3. AI screening results
+![Ranked candidates and analytics](docs/screenshots/analytics.png)
+
+> Source files: `screenshots/1-overview.pdf`, `2-home-page.pdf`, `3-screening-results.pdf`  
+> Refresh images: `python scripts/update_screenshots.py`
 
 ## Features
 
@@ -94,12 +97,11 @@ Ai-resume-screening-agent/
 
 ## Refresh screenshots
 
-With the app running (`python main.py`):
+Replace PDFs in `screenshots/`, then:
 
 ```bash
-pip install playwright
-python -m playwright install chromium
-python scripts/capture_screenshots.py
+pip install pymupdf
+python scripts/update_screenshots.py
 ```
 
 ## Author
